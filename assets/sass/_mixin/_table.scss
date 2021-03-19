@@ -1,0 +1,186 @@
+.schedule {
+  max-width: 500px;
+  padding: 30px 50px 20px 40px;
+  background: #fff;
+  border-top-right-radius: 20px;
+  
+}
+.table-schedule {
+  border-collapse: collapse;
+  font-size: 12px;
+  thead {
+    font-size: 13px;
+  }
+
+  th, td {
+    background-color: #fff;
+    text-align: center;
+    vertical-align: middle;
+      padding: 11px 12px;
+      min-width: 44px;
+  }
+
+    .color-green {
+        color: #2e922e;
+    }
+  thead {
+    th {
+      border-bottom: 1px solid #e3e3e3;
+        &:first-child {
+            font-size: 13px;
+            min-width: 115px;
+        }
+      &:not(:last-child) {
+        border-right: 1px solid #e3e3e3;
+      }
+    }
+  }
+  tbody {
+    th {
+    }
+    tr {
+      th, td {
+        &:not(:last-child) {
+          border-right: 1px solid #e3e3e3;
+        }
+      }
+    }
+  }
+}
+
+@media ( min-width: 768px ) {
+  .table-schedule {
+    th, td {
+    }
+    thead {
+      th {
+        &:first-child {
+        }
+        &:last-child {
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:last-child {
+          th, td {
+            &:first-child {
+            }
+          }
+        }
+        &:last-child {
+          th, td {
+            &:last-child {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media ( max-width: 1200px ) {
+  .table-schedule {
+      th, td {
+          padding: 5px 3px;
+          min-width: 44px;
+      }
+  }
+}
+
+@media ( max-width: 1200px ) and ( min-width: 768px ) {
+  .table-schedule {
+    th, td {
+      padding: 11px 12px;
+      letter-spacing: 0;
+    }
+  }
+}
+
+@media ( max-width: 1199px ) and ( min-width: 992px ) {
+  .table-schedule {
+  }
+}
+
+@media ( max-width: 991px ) and ( min-width: 480px ) {
+    .table-schedule {
+        thead {
+            th:first-child {
+                font-size: 19.5px;
+                min-width: 150px;
+            }
+        }
+    }
+}
+
+@media ( max-width: 767px ) {
+  .table-schedule {
+
+    th, td {
+
+    }
+    thead {
+      th {
+        &:first-child {
+
+        }
+        &:last-child {
+
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:last-child {
+          th, td {
+            &:first-child {
+            }
+          }
+        }
+        &:last-child {
+          th, td {
+            &:last-child {
+            }
+          }
+        }
+      }
+    }
+  }
+  .schedule {
+    overflow: auto;
+    max-width: 100%;
+  }
+}
+
+@media  (max-width: 600px ){
+    .schedule {
+        padding: 30px 2% 20px 2%;
+    }
+}
+
+@media  (max-width: 479px ){
+    .schedule {
+        font-size: 10px!important;
+    }
+
+    .table-schedule {
+        thead th:first-child {
+            font-size: 12px!important;
+            min-width: 105px;
+        }
+
+        th, td {
+            min-width: 30px;
+        }
+    }
+}
+
+@media  (max-width: 353px ){
+    .table-schedule {
+        thead th:first-child {
+            min-width: 85px;
+        }
+    }
+}
+
+

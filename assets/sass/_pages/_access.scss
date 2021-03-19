@@ -1,0 +1,30 @@
+.access{
+    &__box{
+        padding: 30px 30px 0;
+        border-top: 2px solid #e7e7e7;
+
+        &__item{
+            margin-bottom: 10px;
+        }
+        .item__meta{padding: 10px 0;}
+    }
+    &__box2{
+        border-width: 2px 0px;
+        border-style: solid;
+        border-color: #E7E7E7;
+        margin-bottom: 40px;
+        .item__col{
+            &:not(:last-child){
+                border-right: 2px solid #e7e7e7;
+            }
+        }
+        &__item{
+            padding: 30px;
+            .item__title{
+                font-size: 18px;
+                color: $color_primary;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

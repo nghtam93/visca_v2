@@ -1,0 +1,143 @@
+.pagination {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    &__item {
+        padding: 0px 4px;
+        a {
+            font-size: 13px;
+            font-weight: 500;
+
+            &.number {
+                display: inline-block;
+                line-height: 25px;
+                text-align: center;
+                width: 25px;
+                height: 25px;
+                background-color: $color-gray-7;
+            }
+        }
+
+        &.active, &:hover {
+            .number {
+                background-color: #2e922e;
+                color: $color-white;
+            }
+        }
+
+        &.text {
+            padding: 0px 15px;
+
+            &.right {
+                padding-right: 26px;
+            }
+            &.left {
+                padding-left: 26px;
+            }
+        }
+
+        svg {
+            margin: 0px 5px;
+        }
+
+        @media ( max-width: 992px ) and ( min-width: 480px ) {
+            &.text {
+                padding: 0px 5px;
+
+                &.right {
+                    padding-right: 8px;
+                }
+                &.left {
+                    padding-left: 8px;
+                }
+            }
+            a {
+                font-size: 19px;
+
+                &.number {
+                    width: 37px;
+                    height: 37px;
+                    line-height: 37px;
+                }
+            }
+        }
+
+        @media ( max-width: 650px ) {
+            &.text {
+                width: 100%;
+                text-align: center;
+                padding: 5px 5px;
+
+                &.right {
+                    padding-right: 5px;
+                    padding-bottom: 10px;
+                }
+                &.left {
+                    padding-left: 5px;
+                    padding-top: 10px;
+                }
+
+                a {
+                    display: inline-block;
+                    min-width: 173px;
+                    background-color: $color-gray-7;
+
+                    svg {
+                        path {
+                            stroke: $color-black-2;
+                        }
+                    }
+                }
+            }
+        }
+        @media ( max-width: 479px ) {
+            &.text {
+                a {
+                    min-width: 125px;
+                }
+            }
+        }
+    }
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+        a {
+            font-size: 13px;
+            font-weight: 500;
+            color: $color-black-2;
+
+            svg {
+                margin: 0px 5px;
+            }
+        }
+        span {
+            display: inline-block;
+            font-size: 13px;
+            color: $color-white;
+            background-color: $color-black-2;
+            padding: 1px 29px;
+        }
+    }
+
+    @media (max-width: 992px ) and (min-width: 480px ) {
+        li {
+            a, span {
+                font-size: 19px;
+            }
+        }
+    }
+
+    @media (max-width: 479px ) {
+        li {
+            span {
+                padding: 1px 20px;
+            }
+        }
+    }
+}
