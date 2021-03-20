@@ -1,10 +1,15 @@
 .button {
    display: inline-block;
    background-color: #2e922e;
+    border: 1px solid #28a745;
     color: #fff;
     padding: 4px 18px 2px;
     font-size: 13px;
     text-align: center;
+    span {
+        position: relative;
+        z-index: 2;
+    }
 
     img {
         max-width: 12px;
@@ -14,7 +19,8 @@
     }
 
     &:hover {
-        color: #fff;
+        background-color: #fff;
+        color: #28a745;
 
         img {
             right: -2px;

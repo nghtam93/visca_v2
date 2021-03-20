@@ -201,6 +201,15 @@
             }
         }
     }
+    @media (max-width:360px){
+        &.banner--home{
+            .main__slider{
+                .slider__item__title {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
 }
 
 

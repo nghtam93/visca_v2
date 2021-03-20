@@ -1,6 +1,10 @@
 var isClicked = false;
 $(document).ready(function(){
 
+    if ( $('body').scrollTop() > $('.animation-button-2').position.top ) {
+        $('.animation-button-2').addClass('selected');
+    }
+
   /*----header----*/
     $('.btn-menu').click(function() {
         $(this).toggleClass('active');
@@ -18,21 +22,66 @@ $(document).ready(function(){
         $(this).toggleClass('active');
         $('.menu-sub').toggleClass('show');
     });
-	// lastScroll = 0;
-	// $(window).on('scroll',function() {
-	// 	var scroll = $(window).scrollTop();
-	// 	if (scroll > 0) {
-	// 		$("header").addClass("sticky-header");
-	// 		if (lastScroll - scroll > 0) {
-	// 			$("header").removeClass("sticky-header");
-	// 		} else {
-	// 			$("header").addClass("full-header");
-	// 		}
-	// 	} else {
-	// 		$("header").removeClass("full-header");
-	// 	}
-	// 	lastScroll = scroll;
-	// });
+    /*----Back to Top----*/
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $('.pagetop').addClass('active');
+        } else {
+            $('.pagetop').removeClass('active');
+        }
+    });
+
+    $(".pagetop a").click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+    $('.clinic-slide-page').slick({
+        centerPadding: '0',
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        centerMode: true,
+        loop: true,
+        asNavFor: '.clinic-slide-page-nav',
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+    $('.clinic-slide-page-nav').slick({
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        asNavFor: '.clinic-slide-page',
+        dots: true,
+        arrows: false,
+        loop: true,
+        centerMode: true,
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
+    });
 
   /*----button scroll----*/
   $('.banner-scroll span').click(function() {
@@ -73,20 +122,6 @@ $(document).ready(function(){
 // 		]
 // 	});
 
-
-  /*----Back to Top----*/
-	$(window).scroll(function() {
-		if ($(this).scrollTop() > 100) {
-			$('.pagetop').addClass('active');
-		} else {
-			$('.pagetop').removeClass('active');
-		}
-	});
-
-	$(".pagetop a").click(function() {
-		$("html, body").animate({ scrollTop: 0 }, "slow");
-		return false;
-	});
 
 });
 

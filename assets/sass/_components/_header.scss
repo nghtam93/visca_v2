@@ -180,26 +180,22 @@
                 justify-content: space-between;
                 align-items: center;
                 padding: 15px 35px 15px 65px;
+                position: relative;
 
                 @media (max-width: 479px) {
                     padding-left: 30px;
                 }
             }
 
-            .icon {
-                display: inline-block;
-                width: 30px;
-                height: 30px;
-                position: relative;
-
+            .show-sub {
                 &:before, &:after {
                     position: absolute;
-                    left: 50%;
+                    right: 35px;
                     top: 50%;
                     content: "";
                     width: 18px;
                     height: 1px;
-                    transform: translateX(-50%) translateY(-50%);
+                    transform: translateX(-50%);
                     background-color: #b3b3b3;
                     transition: all 0.3s;
                 }
@@ -207,14 +203,14 @@
                 &:after {
                     width: 1px;
                     height: 18px;
+                    right: 52px;
+                    top: 38%;
                 }
             }
 
             .show-sub.active {
-                .icon {
-                    &:after {
-                        opacity: 0;
-                    }
+                &:after {
+                    opacity: 0;
                 }
             }
 

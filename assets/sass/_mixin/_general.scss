@@ -8,7 +8,7 @@
     }
     &__meta{
         position: absolute;
-        top: 50%;
+        top: calc(50% - 25px);
         left: 50px;
     }
     .item__wrap {
@@ -30,6 +30,9 @@
         color: #fff;
     }
     @media screen and (max-width: 767px){
+        &__meta{
+            top: calc(50% - 75px);
+        }
         .item__wrap {
             flex-direction: column;
         }
@@ -47,14 +50,21 @@
             padding-top: 67%;
         }
     }
+    @media screen and (max-width: 480px){
 
-    @media screen and (max-width: 479px){
-        .item__sub{
-            font-size: 26px;
-            padding: 12px 10px;
+        .item__title,.item__sub{
+            padding: 13px 30px;
+            min-width: 180px;
         }
-        .item__title{
-            padding: 12px 10px;
+        .item__title {
+            font-size: 16px;
+        }
+        .item__sub {
+            font-size: 28px;
+        }
+        &__meta {
+            top: calc(50% - 50px);
+            left: 15px;
         }
     }
 }
@@ -93,3 +103,56 @@
         }
     }
 }
+
+.animation-button {
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: #28a745;
+        transform: translateX(-100%);
+        transition: all 1s;
+    }
+}
+
+.animation-button-2 {
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: $color-black-3;
+        transform: translateX(-100%);
+        transition: all 1s;
+    }
+}
+
+.animated {
+    &.animation-button, &.animation-button-2 {
+        &:before {
+            transform: translateX(100%);
+        }
+    }
+}
+
+.qr-button.animated, .great-button .animation-button-2 {
+    .animation-button-2 {
+        &:before {
+            transform: translateX(100%);
+        }
+    }
+}
+
+

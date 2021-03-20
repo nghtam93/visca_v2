@@ -1,23 +1,41 @@
 $color_primary: #2E922E;
 
 .container{
-    width: calc(100% - 50px);
+    width: calc(100% - 20px);
     @media screen and (min-width: 768px){
-        width: calc(100% - 100px);
+        width: calc(100% - 70px);
         max-width: 1440px;
     }
     @media screen and (min-width: 1280px){
-        width: calc(100% - 120px);
+        width: calc(100% - 80px);
     }
     @media (max-width:767.98px){
         width: 100%;
+        padding: 0;
+        max-width: 100%;
+    }
+}
+.padding-mobile {
+    @media (max-width:767.98px){
+        padding: 0px 25px;
     }
 }
 .box-layout{
     @media screen and (max-width: 767px){
         max-width: 100%;
         padding: 0;
+        .section--visca-clinic{
+            .clinic__content{
+                padding: 30px;
+            }
+        }
+        .schedule {
+            width: 100%;
+        }
+        .table-schedule{margin: auto;}
+
     }
+
 }
 .box-layout__wrap {
     border-width: 0px 2px;
@@ -28,12 +46,20 @@ $color_primary: #2E922E;
     }
 }
 
-
-
 .dnfix__thumb{position:relative;height:auto;width:100%;overflow:hidden;display:block;padding-top:68.075%;}
 .dnfix__thumb img{margin:0px auto;position:absolute;width:100%;height:100%;top:0;left:0;object-fit:cover}
 .dnfix__thumb.-contain img{object-fit:contain;}
-
+.dnfix__thumb {
+    transition: all 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    img {
+        transition: all 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    &:hover {
+        img {
+            transform: scale(1.05);
+        }
+    }
+}
 /* fix col */
 .row.no-gutters20{margin-right:-10px;margin-left:-10px}
 .row.no-gutters20 > [class^="col-"],.row.no-gutters20 > [class*=" col-"]{padding-right:10px;padding-left:10px}
