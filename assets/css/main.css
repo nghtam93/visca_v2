@@ -4,6 +4,11 @@
 @import url(../libs/slick_slider/css/slick.css);
 @font-face {
   font-family: 'YuGothic';
+  font-weight: 500;
+  src: url("../fonts/yugothic-medium.otf"); }
+@font-face {
+  font-family: 'YuGothicB';
+  font-weight: 700;
   src: url("../fonts/yugothib.ttf"); }
 @font-face {
   font-family: 'Yu Mincho';
@@ -183,7 +188,8 @@ a {
   color: #fff;
   padding: 4px 18px 2px;
   font-size: 13px;
-  text-align: center; }
+  text-align: center;
+  font-weight: 700; }
   .button span {
     position: relative;
     z-index: 2; }
@@ -944,6 +950,7 @@ body.show-menu {
       width: 100%;
       z-index: 1; }
     .banner.banner--home .main__slider .slider__item__title {
+      font-family: 'Yu Mincho', sans-serif;
       font-size: 32px;
       line-height: normal;
       color: #ffffff; }
@@ -1178,7 +1185,8 @@ body.show-menu {
     .section--opening .box-open .time-open {
       font-size: 13px;
       color: #2e922e;
-      letter-spacing: 1.5px; }
+      letter-spacing: 1.5px;
+      font-weight: 700; }
     @media (max-width: 992px) and (min-width: 480px) {
       .section--opening .box-open .time-open {
         font-size: 19.5px; } }
@@ -1243,7 +1251,8 @@ body.show-menu {
     padding-bottom: 25px;
     margin-bottom: 25px;
     border-bottom: 2px solid #efefef;
-    padding-right: 80px; }
+    padding-right: 80px;
+    min-height: 105px; }
     .section .list-new li .meta {
       font-size: 13px;
       margin-bottom: 5px; }
@@ -1321,6 +1330,8 @@ body.show-menu {
         .section--calendar .calendar-wrap {
           padding: 40px 10px;
           height: 339px; } }
+  .section--great .section__title {
+    margin-bottom: 60px; }
   .section--great .great-wrap {
     display: flex;
     flex-wrap: wrap; }
@@ -2020,7 +2031,8 @@ body.show-menu {
       justify-content: space-between; }
       .section--contact .contact-home .title {
         font-size: 16px;
-        margin-bottom: 20px; }
+        margin-bottom: 20px;
+        font-weight: 700; }
         @media (max-width: 992px) and (min-width: 480px) {
           .section--contact .contact-home .title {
             font-size: 24px;
@@ -2143,6 +2155,7 @@ body.show-menu {
     padding: 30px; }
     .access__box2__item .item__title {
       font-size: 18px;
+      font-weight: 700;
       color: #2E922E;
       margin-bottom: 10px; }
 @media screen and (max-width: 767px) {

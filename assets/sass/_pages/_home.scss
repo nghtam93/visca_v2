@@ -218,7 +218,7 @@
                 font-size: 13px;
                 color: #2e922e;
                 letter-spacing: 1.5px;
-
+                font-weight: 700;
             }
 
             @media ( max-width: 992px ) and ( min-width: 480px ) {
@@ -331,6 +331,7 @@
             margin-bottom: 25px;
             border-bottom: 2px solid #efefef;
             padding-right: 80px;
+            min-height: 105px;
 
             .meta {
                 font-size: 13px;
@@ -474,6 +475,9 @@
     }
 
     &--great {
+        .section__title {
+            margin-bottom: 60px;
+        }
         .great-wrap {
             display: flex;
             flex-wrap: wrap;
@@ -1663,6 +1667,7 @@
             .title {
                 font-size: 16px;
                 margin-bottom: 20px;
+                font-weight: 700;
 
                 @media ( max-width: 992px ) and ( min-width: 480px ) {
                     font-size: 24px;
