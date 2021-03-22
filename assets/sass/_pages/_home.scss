@@ -445,6 +445,10 @@
             align-items: center;
         }
 
+        .section__title {
+            margin-bottom: 0;
+        }
+
         .calendar-wrap {
             margin-left: 23px;
             height: 496px;
@@ -457,6 +461,10 @@
             border-bottom: 2px solid #e8e8e8;
             padding-top: 100px;
             margin-bottom: 35px;
+
+            .section__title {
+                margin-bottom: 40px;
+            }
 
             .calendar-wrap {
                 height: 394px;
@@ -841,6 +849,18 @@
                         border-bottom: none;
                     }
                 }
+
+                &.style-2 {
+                    li {
+                        .title {
+                            width: 170px;
+                        }
+
+                        br {
+                            display: block;
+                        }
+                    }
+                }
             }
         }
 
@@ -880,7 +900,15 @@
                             width: calc(100% - 100px);
                         }
                     }
+                    &.style-2 {
+                        li {
+                            .title {
+                                width: 150px;
+                            }
+                        }
+                    }
                 }
+
             }
         }
     }

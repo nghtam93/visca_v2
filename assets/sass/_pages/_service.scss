@@ -162,6 +162,11 @@
         justify-content: center;
         height: 100%;
         padding-left: 20px;
+
+        .bottom {
+            margin-top: 20px;
+            color: #28a745;
+        }
     }
     @media (max-width: 992px) {
         .thumb {

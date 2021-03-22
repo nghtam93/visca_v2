@@ -7,6 +7,8 @@
     font-size: 13px;
     text-align: center;
     font-weight: 700;
+    overflow: hidden;
+    position: relative;
     span {
         position: relative;
         z-index: 2;
@@ -25,6 +27,26 @@
 
         img {
             right: -2px;
+        }
+    }
+
+    &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: $color-black-3;
+        transform: translateX(-100%);
+        transition: all 1s;
+    }
+}
+
+.animated {
+    &.button {
+        &:before {
+            transform: translateX(100%);
         }
     }
 }
