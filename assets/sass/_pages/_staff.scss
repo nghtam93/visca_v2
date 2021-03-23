@@ -95,12 +95,23 @@
             margin-bottom: 20px;
             font-weight: 500;
             line-height: 24px;
+            line-height: normal;
 
             .label {
-                width: 125px;
+                -ms-flex: 0 0 88px;
+                flex: 0 0 88px;
+                max-width: 88px;
             }
         }
-
+        @media (max-width: 767px) {
+            li{
+                .label {
+                    -ms-flex: 0 0 130px;
+                    flex: 0 0 130px;
+                    max-width: 130px;
+                }
+            }
+        }
         @media (max-width: 479px) {
             li {
                 display: block;

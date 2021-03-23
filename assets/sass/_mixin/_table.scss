@@ -3,7 +3,9 @@
   padding: 30px 50px 20px 40px;
   background: #fff;
   border-top-right-radius: 20px;
-  
+  @media ( max-width: 991px ) {
+    padding: 30px 15px 20px 15px;
+  }
 }
 .table-schedule {
   border-collapse: collapse;
@@ -88,6 +90,17 @@
   }
 }
 
+@media ( max-width: 991px ){
+  .table-schedule {
+      thead {
+          th:first-child {
+              font-size: 19.5px;
+              min-width: 170px;
+          }
+      }
+  }
+}
+
 @media ( max-width: 1200px ) and ( min-width: 768px ) {
   .table-schedule {
     th, td {
@@ -107,12 +120,17 @@
         thead {
             th:first-child {
                 font-size: 19.5px;
-                min-width: 150px;
             }
         }
     }
 }
-
+@media ( max-width: 991px ) {
+  .table-schedule{
+    th, td {
+      min-width: 60px;
+    }
+  }
+}
 @media ( max-width: 767px ) {
   .table-schedule {
 
@@ -122,7 +140,7 @@
     thead {
       th {
         &:first-child {
-
+          min-width: 150px;
         }
         &:last-child {
 
@@ -153,9 +171,12 @@
 }
 
 @media  (max-width: 600px ){
-    .schedule {
-        padding: 30px 2% 20px 2%;
+  .schedule {
+    th, td {
+      min-width: 40px;
     }
+  }
+  
 }
 
 @media  (max-width: 479px ){

@@ -78,29 +78,6 @@
         }
     }
 
-    .header__btn__order {
-        position: fixed;
-        top: 50%;
-        z-index: 99;
-        right: -60px;
-        background: #2e922e;
-        color: #fff;
-        padding: 8px 33px;
-        font-size: 13px;
-        -webkit-transform: rotate(90deg);
-        -moz-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        transform: rotate(90deg);
-
-        a{
-            color: #fff;
-        }
-        &:hover{
-            background-color: #257325;
-        }
-    }
-
     .schedule {
         position: absolute;
         left: 0;
@@ -118,6 +95,7 @@
             .main__slider{
                 .slider__item__box {
                     top: 44%;
+                    padding: 0 15px;
                 }
                 .slider__item__title {
                     font-size: 48px;

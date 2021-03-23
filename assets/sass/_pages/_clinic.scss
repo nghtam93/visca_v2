@@ -84,6 +84,11 @@
     &--clinic-slide {
         border-bottom: 2px solid #E7E7E7;
     }
+    @media (max-width: 991px) {
+        &--clinic {
+            padding: 80px 0px 120px;
+        }
+    }
 }
 
 .clinic-slide-page {
