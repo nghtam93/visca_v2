@@ -41,6 +41,29 @@
             margin: 0px 5px;
         }
 
+        @media ( max-width: 992px ) {
+            &.text {
+                a {
+                    width: 37px;
+                    height: 37px;
+                    line-height: 37px;
+                    display: inline-block;
+                    text-align: center;
+                    background: #D8D8D8;
+
+                    span {
+                        display: none;
+                    }
+
+                    svg {
+                        path {
+                            fill: #333;
+                        }
+                    }
+                }
+            }
+        }
+
         @media ( max-width: 992px ) and ( min-width: 480px ) {
             &.text {
                 padding: 0px 5px;
@@ -63,38 +86,24 @@
             }
         }
 
-        @media ( max-width: 520px ) {
+        @media ( max-width: 479px ) {
             &.text {
-                width: 100%;
-                text-align: center;
-                padding: 5px 5px;
-
-                &.right {
-                    padding-right: 5px;
-                    padding-bottom: 10px;
-                }
-                &.left {
-                    padding-left: 5px;
-                    padding-top: 10px;
-                }
+                padding: 0px 4px;
 
                 a {
                     display: inline-block;
-                    min-width: 173px;
-                    background-color: $color-gray-7;
-
-                    svg {
-                        path {
-                            stroke: $color-black-2;
-                        }
-                    }
+                    line-height: 25px;
+                    text-align: center;
+                    width: 25px;
+                    height: 25px;
                 }
-            }
-        }
-        @media ( max-width: 479px ) {
-            &.text {
-                a {
-                    min-width: 125px;
+
+                &.right {
+                    padding-right: 4px;
+                }
+
+                &.left {
+                    padding-left: 4px;
                 }
             }
         }
@@ -116,7 +125,7 @@
                 margin: 0px 5px;
             }
         }
-        span {
+        .link {
             display: inline-block;
             font-size: 13px;
             color: $color-white;
@@ -127,7 +136,7 @@
 
     @media (max-width: 992px ) and (min-width: 480px ) {
         li {
-            a, span {
+            a, .link {
                 font-size: 19px;
             }
         }
@@ -135,7 +144,7 @@
 
     @media (max-width: 479px ) {
         li {
-            span {
+            .link {
                 padding: 1px 20px;
             }
         }

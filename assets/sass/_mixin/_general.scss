@@ -1,6 +1,10 @@
-.section__box{
-
+.menu-primary {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background: #fff;
 }
+
 .page__header{
     position: relative;
     &__banner{
@@ -70,10 +74,15 @@
 }
 
 .sc__breadcrumb{
-    padding: 20px 50px;
+    padding: 20px 0px;
     border-bottom: 2px solid #e7e7e7;
-    @media screen and (max-width: 767px){
-        // display: none;
+    .sc__wrap {
+        width: calc(100% - 120px);
+        margin: auto;
+
+        @media screen and (max-width: 767px){
+            width: calc(100% - 50px);
+        }
     }
 }
 

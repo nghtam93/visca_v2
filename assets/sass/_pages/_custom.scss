@@ -40,13 +40,29 @@
                             z-index: 1;
                     }
                     &__title {
-                        font-family: 'Yu Mincho', sans-serif;
+                        font-family: 'Noto Serif JP', serif;
                         font-size: 32px;
                         line-height: normal;
                         color: #ffffff;
                     }
                 }
             }
+        }
+
+        .flickity-slider {
+            transform: none !important;
+        }
+
+        .item__wrap {
+            left: 0 !important;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: -1;
+        }
+
+        .item__wrap.is-selected {
+            opacity: 1;
+            z-index: 0
         }
     }
     &__address {
@@ -87,7 +103,7 @@
 
     @media (max-width: 1200px) {
         .banner__address {
-            bottom: 200px;
+            bottom: 235px;
         }
     }
     @media (max-width: 991px) {
@@ -147,6 +163,10 @@
             .main__slider{
                 .slider__item__box {
                     top: 25%;
+
+                    .container {
+                        padding: 0;
+                    }
                 }
                 .slider__item__title {
                     font-size: 36px;

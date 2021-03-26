@@ -26,7 +26,7 @@ $color_primary: #2E922E;
         padding: 0;
         .section--visca-clinic{
             .clinic__content{
-                padding: 30px;
+                padding: 30px 25px;
             }
         }
         .schedule {
@@ -97,20 +97,19 @@ $color_primary: #2E922E;
 .button__fix {
     position: fixed;
     top: 50%;
+    transform: translateY(-50%);
     z-index: 99;
-    right: -60px;
+    right: 0px;
     background: #2e922e;
     color: #fff;
-    padding: 8px 33px;
+    padding: 8px 18px;
     font-size: 13px;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
+    line-height: 22px;
 
     a{
         color: #fff;
+        display: flex;
+        flex-direction: column;
     }
     &:hover{
         background-color: #257325;

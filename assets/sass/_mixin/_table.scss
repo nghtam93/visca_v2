@@ -4,8 +4,13 @@
   background: #fff;
   border-top-right-radius: 20px;
   @media ( max-width: 991px ) {
-    padding: 30px 15px 20px 15px;
+    padding: 30px 15px 10px 15px;
   }
+
+    .text {
+        margin-top: 5px;
+        text-align: center;
+    }
 }
 .table-schedule {
   border-collapse: collapse;
@@ -176,7 +181,7 @@
       min-width: 40px;
     }
   }
-  
+
 }
 
 @media  (max-width: 479px ){

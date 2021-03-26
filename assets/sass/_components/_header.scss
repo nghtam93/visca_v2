@@ -89,6 +89,21 @@
         }
     }
 
+    @media ( max-width: 992px ) {
+        padding: 17px 0px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        background-color: #fff;
+    }
+}
+
+body {
+    @media ( max-width: 992px ) {
+        padding-top: 70px;
+    }
 }
 
 .menu-primary {
@@ -103,6 +118,14 @@
             position: relative;
             width: 16.66666666666667%;
             text-align: center;
+
+            &.logo {
+                display: none;
+
+                img {
+                    max-width: 90%;
+                }
+            }
 
             a {
                 display: block;
@@ -150,13 +173,24 @@
     @media (max-width: 991px) {
         display: none;
     }
+
+    &.downscrolled {
+        ul {
+            li {
+                width: 14.28571428571429%;
+                &.logo {
+                    display: block;
+                }
+            }
+        }
+    }
 }
 
 .nav-mobile {
     position: fixed;
     left: 0;
     bottom: 0;
-    top: 120px;
+    top: 70px;
     opacity: 0;
     width: 100%;
     z-index: 1001;
