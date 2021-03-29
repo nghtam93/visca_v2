@@ -1708,12 +1708,14 @@ body.show-menu {
         width: 88px; } }
   .section--features .sc__wrap {
     position: relative; }
-  .section--features .features__slider:not(.flickity-enabled) .slider__item + .slider__item {
-    display: none; }
   .section--features .features__slider .slider__item {
     outline: 0;
     position: relative;
-    width: 100%; }
+    width: 100%;
+    z-index: -1;
+    left: 0 !important;
+    opacity: 0;
+    transition: 0.5s; }
     .section--features .features__slider .slider__item__thumb {
       width: 56%;
       margin-left: auto;
@@ -1766,6 +1768,11 @@ body.show-menu {
       .section--features .features__slider .slider__item__readmore:hover {
         background-color: #fff;
         color: #28a745; }
+    .section--features .features__slider .slider__item.is-selected {
+      opacity: 1;
+      z-index: 0; }
+  .section--features .flickity-slider {
+    transform: none !important; }
   .section--features .slider__nav {
     position: absolute;
     bottom: 50px;
